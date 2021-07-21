@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Individual Assignment</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Simple<br>Life</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Homepage</a> 
+    <a href="#Experiences" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Experiences</a> 
+    <a href="#Biodata" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Biodata</a> 
+    <a href="#Education" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Education</a> 
+    <a href="#Family" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Family</a> 
+    <a href="#Gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Travel Makes Me Happy</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>blessed.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="korea.19.jpg" style="width:50%" onclick="onClick(this)" alt="Summer in Korea">
+      <img src="7436.jpg" style="width:50%" onclick="onClick(this)" alt="Cafe Hunting in Penang,Malaysia">
+      <img src="singapore 19.jpg" style="width:50%" onclick="onClick(this)" alt="Glass Garden in Singapore">
+      <img src="bangkok 19.jpg" style="width:50%" onclick="onClick(this)" alt="Wat Arun Temple">
+    </div>
+
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Biodata -->
+  <div class="w3-container" id="Biodata" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Biodata.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Blessed 22 years of living!</p>
+    <p>My name is Nur Athiqah binti Meor Hamdan. My date of birth is 19 January 1999. I was born in Batu Gajah, Perak. My father, Meor Hamdan b Meor Othman a contractor and my mother Mayhazilah binti Noordin is a housewife. I have 5 siblings including myself and i am the yougest. I have 3 sisters and 1 brother.
+    </p>
+  </div>
+  
+  <!-- Education -->
+  <div class="w3-container" id="Education" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-green"><b>Education.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Education is lifetime investment.</p>
+    <p>My highschool name is SMK Gunung Rapat. I spend 4 years at that school. It was a fun experiences to be able to learn in a dedicated school. After I finished highschool, I pursue my Diploma in Business Studies in UiTM Merbok, Kedah for 2 and half years. I am currently on my way to graduate degree in Marketing in UiTM Kota Bharu, Kelantan.
+  </div>
+
+
+  <!-- Family -->
+  <div class="w3-container" id="Family" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Family.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are family of 7. I have 3 sisters and 1 brother. </p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">SIBLINGS NAME</li>
+        <li class="w3-padding-16">THE ELDEST NOOR HAZRIN</li>
+        <li class="w3-padding-16">SECOND NOOR FARAHIN</li>
+        <li class="w3-padding-16">THIRD AMIRUL HAKIM</li>
+        <li class="w3-padding-16">FOURTH NOOR SHUHADA</li>
+        <li class="w3-padding-16">YOUNGEST NUR ATHIQAH</li>
+        <li class="w3-padding-16">
+        </li>
+      </ul>
+    </div>
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">AGE</li>
+        <li class="w3-padding-16">28</li>
+        <li class="w3-padding-16">27</li>
+        <li class="w3-padding-16">25</li>
+        <li class="w3-padding-16">23</li>
+        <li class="w3-padding-16">22</li>
+        <li class="w3-padding-16">
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Gallery -->
+  <div class="w3-container" id="Gallery" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Gallery.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Few memorable moments with the families and friends!</p>
+      <img src="haji.jpg" style="width:50%" onclick="onClick(this)" alt="Weekend Activities">
+      <img src="bf.jpg" style="width:50%" onclick="onClick(this)" alt="Hari Raya Visits With Bestfriend">
+    </div>
+
+
+
+  </div>
+<!-- End page content -->
+</div>
+
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
